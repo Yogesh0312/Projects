@@ -1,0 +1,165 @@
+form {
+  font-size: small;
+  font-weight: 500;
+}
+.sticky-top {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 1px 0px 0px;
+  background-color: white;
+}
+#roundclick {
+  display: none;
+}
+#multiclick {
+  display: none;
+}
+body {
+  background-image: url(/IMAGE/download.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.boxmain {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+.boxmain2 {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+}
+.boxmain3 {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.boxmain4 {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  background: linear-gradient(to left, rgb(245, 135, 135), white);
+}
+.boxmain5 {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  font-size: smaller;
+}
+.btn2,
+.btn3,
+.btn4 {
+  display: none;
+}
+.extraflight1,
+.extraflight2,
+.extraflight3 {
+  display: none;
+}
+.go2box1 {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.hidediv {
+  display: none;
+}
+.hoverli ul li {
+  color: blue;
+}
+
+.hoverli ul li:hover {
+  color: red;
+}
+
+.links a {
+  text-decoration: none;
+}
+.links a:hover {
+  color: red;
+}
+.links2 a {
+  text-decoration: none;
+}
+.links2 a:hover {
+  color: red;
+}
+@media screen and (max-width: 768px) {
+  .hotels-sm {
+    display: none;
+  }
+}
+@media screen and (max-width: 539px) {
+  .trainsmain .col-6 {
+    width: 100%;
+  }
+  .trainsmain2 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .bustext {
+    display: none;
+  }
+  .bustext .row img {
+    width: 25px;
+  }
+}
+@media screen and (max-width:1020px) {
+  .toast-container{
+    display: none;
+  }
+  
+}
+@media screen and (max-width:768px) {
+  .clocktime .col-md-5{
+    display: none;
+  }
+  
+}
+ /* For mobile phones: */
+ [class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+
+  /* For tablets: */
+  .col-md-1 {
+      width: 8.33%;
+  }
+
+  .col-md-2 {
+      width: 16.66%;
+  }
+
+  .col-md-3 {
+      width: 25%;
+  }
+
+  .col-md-4 {
+      width: 33.33%;
+  }
+
+  .col-md-5 {
+      width: 41.66%;
+  }
+
+  .col-md-6 {
+      width: 50%;
+  }
+
+  .col-md-7 {
+      width: 58.33%;
+  }
+
+  .col-md-8 {
+      width: 66.66%;
+  }
+
+  .col-md-9 {
+      width: 75%;
+  }
+
+  .col-md-10 {
+      width: 83.33%;
+  }
+
+  .col-md-11 {
+      width: 91.66%;
+  }
+
+  .col-md-12 {
+      width: 100%;
+  }
+}

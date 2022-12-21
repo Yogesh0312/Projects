@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trains</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <img src="IMAGE/goibibo-logo.png" class="float-md-start" width="150px" height="50px">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link bi bi-airplane-fill btn btn-outline-primary" href="index.html">
+                            Flights</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link bi bi-building btn btn-outline-primary" href="Hotels.html">
+                            Hotels</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link bi bi-train-front-fill btn btn-outline-primary active"
+                            href="Trains.html"> Trains</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link bi bi-car-front-fill btn btn-outline-primary" href="Cabs.html">
+                            Cabs</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link bi bi-bus-front btn btn-outline-primary" href="Bus.html">
+                            Bus</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link bi bi-currency-dollar btn btn-outline-primary" href="#"> Forex</a>
+                    </li>
+
+                </ul>
+                <a class="ms-auto tool" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                    title="Access Your Bookings Easy Cancellation,Date Change And Much More"> <img src="IMAGE/Nav2.png"
+                        alt=""></a>
+
+                <button type="button" class="btn btn-outline-primary ms-4" data-bs-toggle="modal"
+                    data-bs-target="#Login">Login/Sign Up</button>
+                    
+
+            </div>
+        </div>
+    </nav>
+    <!-- Modal1 -->
+    <div class="modal fade" id="Login">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Login Here</h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <input type="text" placeholder="Enter User Name " class="form-control">
+                    <br>
+                    <input type="password" placeholder="Enter Password " class="form-control">
+                    <br>
+                    <input type="submit" value="Login" class="btn btn-primary">
+                    <button type="button" class="btn btn-info" data-bs-toggle="modal"
+                        data-bs-target="#Signup">Signup</button>
+
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal2 -->
+    <div class="modal fade" id="Signup" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h4 class="modal-title">Signup Here</h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <input type="text" placeholder="Enter Name " class="form-control">
+                    <br>
+                    <input type="email" placeholder="Enter Email Id " class="form-control">
+                    <br>
+                    <input type="number" placeholder="Enter Mobile Number " class="form-control">
+                    <br>
+                    <input type="text" placeholder="Enter User Name " class="form-control">
+                    <br>
+                    <input type="password" placeholder="Enter Password " class="form-control">
+                    <br>
+                    <input type="submit" value="Signup" class="btn btn-primary">
+
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="toast-container fixed-bottom" style="width: 15%;">
+        <div class="toast">
+
+            <div class="toast-header bg-warning">
+                <strong class="mr-auto text-primary">GoIbibo</strong>
+                <small class="text-muted">5 mins ago</small>
+                <button type="button" class="close" data-bs-dismiss="toast">&times;</button>
+            </div>
+
+            <div class="toast-body bg-danger">
+                <img src="IMAGE/toast image.png" alt="">
+                <p class="bg-black text-white">Save upto INR 1700* on APP.<br> Use code: GOAPP.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid trainsmain">
+        <div class="row">
+            <div class="col-md-12 my-3">
+                <h5>Book IRCTC Train Tickets</h5>
+            </div>
+            <div class="col-md-6">
+                <div class="container bg-light px-3 rounded-3 go2box1">
+                    <form>
+                        <div class="form-group form-check-inline my-3">
+                            <label class="form-check-label" for="radio1">From</label>
+                            <input type="text" class="form-control" id="radio1" placeholder="Select Station / City"
+                                checked>
+                        </div>
+                        <div class="form-group form-check-inline my-3">
+                            <a href="#" class="btn text-bg-primary rounded-circle btn-sm bi bi-arrow-left-right"></a>
+                        </div>
+                        <div class="form-group form-check-inline my-3">
+                            <label class="form-check-label" for="radio2">To</label>
+                            <input type="text" class="form-control" id="radio2" placeholder="Select Station / City">
+                        </div>
+                        <div class="form-group my-3">
+                            <label class="form-check-label">I Know My Train (Optional)</label>
+                            <input type="text" class="form-control" placeholder="Choose Your Train">
+                        </div>
+                        <div class="form-group my-2 form-check-inline">
+                            <label for="text">Date</label>
+                            <input type="date" class="form-control" placeholder="Enter City or Airport" name="city">
+
+                        </div>
+
+                        <div class="form-group form-check-inline my-3">
+                            <input type="radio" class="form-check-input" name="optradio" checked>
+                            <label class="form-check-label">Today</label>
+                        </div>
+                        <div class="form-group form-check-inline my-3">
+                            <input type="radio" class="form-check-input" id="radio3" name="optradio">
+                            <label class="form-check-label">Tomorrow</label>
+                        </div>
+
+                    </form>
+                    <div class="my-2 d-flex justify-content-center trainbtn">
+                        <button class="btn my-3 btn-danger w-100 trainbtn2 ">Search Flights</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6 trainsmain2">
+
+
+                <div class="card w-100 mb-3 p-2" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                    <img src="IMAGE/TrainsHomeBanner-1610443393.webp" class="card-img w-100" alt="">
+
+                </div>
+
+                <div class=" w-100">
+                    <div class="float-start mx-1 card" style="width: 45%;">
+                        <img src="IMAGE/page3-img-1" class="w-100" alt="">
+                        <p class="card-text m-0 p-2"><small>Get Comfirmed Train Tickets Or 2x Return</small> </p>
+                        <p class="card-text text-muted m-0 p-2"><small>Limited Period</small> </p>
+                    </div>
+                    <div class=" float-end mx-1 card" style="width: 45%;">
+                        <img src="IMAGE/page3-img-2" class="w-100" alt="">
+                        <p class="card-text m-0 p-2"><small>Get a Full Refund On Cancelled Bookings</small> </p>
+                        <p class="card-text text-muted m-0 p-2"><small>Limited Period</small> </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Train Information Services</h4>
+            </div>
+            <div class="col-md-3 shadow">
+                <a href="#" class="btn text-primary w-100 bi bi-train-front-fill"> PNR Status</a>
+            </div>
+            <div class="col-md-3 shadow">
+                <a href="#" class="btn text-primary w-100 bi bi-train-front-fill"> Live Train Status</a>
+            </div>
+            <div class="col-md-3 shadow">
+                <a href="#" class="btn text-primary w-100 bi bi-train-front-fill"> View Train Coach Position</a>
+            </div>
+            <div class="col-md-3 shadow">
+                <a href="#" class="btn text-primary w-100 bi bi-train-front-fill"> Platform Locator</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h4>IRCTC Settings</h4>
+            </div>
+            <div class="col-md-3 shadow">
+                <a href="#" class="btn text-primary w-100 bi bi-balloon-heart"> Forgot IRCTC Password</a>
+            </div>
+            <div class="col-md-3 shadow">
+                <a href="#" class="btn text-primary w-100 bi bi-balloon-heart"> Forgot IRCTC ID</a>
+            </div>
+            <div class="col-md-3 shadow">
+                <a href="#" class="btn text-primary w-100 bi bi-balloon-heart"> Create IRCTC ID</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 boxmain5 py-3 rounded-3">
+        <div>
+            <h3>Book Train Tickets On GoIbibo</h3>
+        </div>
+        <p><small>Travelling across the country is now easier than ever because of the complete digitization of the
+                IRCTC ticketing procedure. Now, you can book train tickets online from the comfort of your home. And
+                it’s not just the train tickets booking system that has been revolutionized. All other services such as
+                checking the PNR status, live train status, train schedule, and train availability are easy-to-use as
+                well. You only have to enter your IRCTC login credentials to book train tickets with ease.
+
+                Being the face of Indian railway travel, the IRCTC Next Generation portal receives thousands of
+                enquiries everyday. You can easily rely on the robust website of IRCTC to meet your train booking
+                requirements.
+
+                There are several reasons why GoIbibo is one of the most trusted online ticket booking platforms, and we
+                will discuss the same later. For now, let us find out the process by which you can book train tickets
+                through IRCTC easily. Remember, having an IRCTC User ID and password is mandatory even if you are trying
+                to book train tickets on GoIbibo. It is a third-party platform in association with IRCTC. </small></p>
+        <div>
+            <h3>How to Book Train Tickets</h3>
+        </div>
+        <p><small>It is extremely easy to book train tickets on IRCTC.
+
+                Below, we are mentioning the steps that you can follow to make your bookings quickly.
+
+                Step 1: Choose the source of your journey and the destination to get your train tickets book. Select the
+                date on which you wish to start the journey
+
+                Step 2: Now, you will have a list of trains based on your destination and source. You have to choose the
+                one you want to book tickets for.
+
+                Step 3: Filter and select the seat class. You can choose from a wide variety of options such as sleeper,
+                seater, first-class AC, second-class AC and third-class AC.
+
+                Step 4: Select your boarding point. Enter the berth preferences and passenger details. There can be
+                multiple passengers, and you will have to enter the details of each person separately.
+
+                Step 5: Enter the necessary contact details including email and mobile number as your e-ticket and
+                m-ticket will be sent on the registered information.
+
+                Step 6: Select the additional preferences. For example, you can make your bookings only if the seats are
+                available or you can specifically book the lower berth or window seat.
+
+                Step 7: Once you have filled all the above-stated details, choose the payment mode that is most
+                convenient for you. You can choose from a wide range of options such as debit card, credit card, net
+                banking and UPI payments.
+
+                Step 8: Enter the User ID and password of your IRCTC accounts. You will soon be redirected to the final
+                page, and your tickets will be confirmed. Soon, you will receive your ticket on your email ID and
+                mobile.
+
+                As you can see, the process is immensely easy, and it’s much better than spending hours just waiting in
+                front of the railway ticket counter for your turn. Besides that, when you book train tickets online,
+                services such as PNR enquiry and live status tracking are easily accessible. If you are using GoIbibo
+                for ticket booking, the procedure is pretty much the same. You will notice that having a valid IRCTC
+                account is mandatory for you to be eligible for making your railway ticket booking on GoIbibo.</small>
+        </p>
+        <div>
+            <h3>Essential Documents to Carry</h3>
+        </div>
+        <p><small>It is essential to carry a few important documents, including government approved ID documents, when
+                you board a train. You must present the same when the Travelling Ticket Examiner asks for it along with
+                your tickets. Here is a list of the important documents that you should keep handy while travelling:
+                <ol type="1">
+                    <li>Aadhar card</li>
+                    <li> Photo ID cards that have a serial number printed on it</li>
+                    <li>Laminated photograph</li>
+                    <li>Student ID card consisting of a photograph</li>
+                    <li>National bank passbook that has your photograph</li>
+                    <li>Photo ID card issued by the State or the Central Government</li>
+                    <li>Pan card</li>
+                    <li>Driving license</li>
+                    <li>Voter ID card</li>
+                    <li>Passport</li>
+                </ol>
+            </small></p>
+    </div>
+
+    <div class="container my-5">
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingone">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseone" aria-expanded="false" aria-controls="collapseone">
+                        <small><b>How can I book train ticket online?</b></small>
+                    </button>
+                </h2>
+                <div id="collapseone" class="accordion-collapse collapse" aria-labelledby="headingone"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <small>
+                            You can easily do online train ticket booking through best train booking app Goibibo by
+                            following the below-mentioned steps:
+                            <ol type="1">
+                                <li>Visit the Goibibo website/app and go to the IRCTC Trains page</li>
+                                <li>Enter the 'From' and 'To' destinations, select the travel date from the calendar
+                                    icon
+                                    and click
+                                    on the Search button</li>
+                                <li>After finding a preferred train, click on check availability and then click on Book
+                                    Now
+                                </li>
+                                <li>Now, enter your IRCTC Login Id. Then, fill the traveller details and click on
+                                    continue</li>
+                                <li>Choose the payment method</li>
+                                <li>Enter the IRCTC Id's password for successful train ticket booking</li>
+                            </ol>
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <small><b>What documents are required for online train ticket booking & can I make changes in my
+                                train booking?</b></small>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <small>
+                            <p>During the online train ticket booking session, you don't require any documents. However,
+                                during the train journey, the traveller must carry a valid photo ID proof such as Aadhar
+                                Card, Voter ID Card, Driving Licence, Pan Card. <br>
+                                IRCTC does not allow to make changes once the ticket is booked. In case any amendments
+                                or modifications are required on your booked train ticket, then you will need to cancel
+                                the ticket and rebook another train ticket.</p>
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <small><b>Why book train ticket online through Goibibo and what are the advantages of mobile
+                                train ticket booking?</b></small>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <small>
+                            <p>Along with an easy train ticket booking procedure, Goibibo offers exciting train ticket
+                                offersand Go cash advantages while booking train tickets. Goibibo also offers a plethora
+                                of payment options on online train booking. Credit Cards, Debit Cards, E-wallets, UPI,
+                                Netbanking, GooglePay and Credit Card EMIs are some of the online payment options
+                                accepted at Goibibo for train ticket booking. <br>
+                                Goibibo app assures a seamless mobile train ticket booking experience. With easy access
+                                to your ticket and instant tracking of PNR status, you can find all the information
+                                related to your train ticket booking on your fingertips.</p>
+                        </small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mt-3 boxmain5">
+        <div class="row">
+            <div class="col-md-3 mt-3">
+                <ul type="none">
+                    <li>
+                        <h6>OUR PRODUCTS</h6>
+                    </li>
+                    <li>Domestic Hotels</li>
+                    <li>International Hotels</li>
+                    <li>Domestic Flights</li>
+                    <li>International Flights</li>
+                    <li>Multi-City Flights</li>
+                    <li>Couple Friendly Hotels</li>
+                    <li>Nearby Getaways</li>
+                    <li>Bus Booking</li>
+                    <li>Cab Booking</li>
+                    <li>Airport Cabs Booking</li>
+                    <li>Outstation Cabs Booking</li>
+                    <li>Train Booking</li>
+                    <li>Go Stays</li>
+                    <li>Trip Money</li>
+                    <li>Goibibo Advertising Solutions</li>
+                </ul>
+            </div>
+            <div class="col-md-3 mt-3">
+                <ul type="none">
+                    <li>
+                        <h6>ABOUT US</h6>
+                    </li>
+                    <li>About Us</li>
+                    <li>Investor Relations</li>
+                    <li>Management</li>
+                    <li>Terms of Services</li>
+                    <li>User Agreement</li>
+                    <li>Privacy</li>
+                    <li>Careers</li>
+                    <li>YouTube Channel</li>
+                    <li>Technology@Goibibo</li>
+                    <li>Customer Support</li>
+                </ul>
+            </div>
+            <div class="col-md-3 mt-3">
+                <ul type="none">
+                    <li>
+                        <h6>TRAVEL ESSENTIALS</h6>
+                    </li>
+                    <li>PNR Status</li>
+                    <li>Offers</li>
+                    <li>Airline Routes</li>
+                    <li>Train Running Status</li>
+                </ul>
+            </div>
+            <div class="col-md-3 mt-3">
+                <ul type="none">
+                    <li>
+                        <h6>MORE LINKS</h6>
+                    </li>
+                    <li>My Account</li>
+                    <li>Wallet</li>
+                    <li>My Bookings</li>
+                </ul>
+            </div>
+            <hr>
+
+            <div class="col-md-12">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus magni similique saepe consectetur
+                    labore voluptatum temporibus, iste commodi maxime itaque deleniti omnis autem exercitationem aliquid
+                    id ipsam ad quia voluptas.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae animi enim ab mollitia ex voluptates
+                    aperiam voluptatibus tempora fugit repudiandae, facilis velit laborum eaque magnam nihil, at
+                    aspernatur asperiores dolor!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati illum enim repellendus et,
+                    dolorum pariatur beatae suscipit, laudantium totam, voluptatum atque consequatur aliquid modi sit
+                    molestiae ratione quidem qui fuga?
+                </p>
+            </div>
+            <hr>
+
+            <div class="col-md-2">
+                <h6>FOLLOW US</h6>
+                <i class="bi bi-facebook" style="font-size:x-large;"></i>
+                <i class="bi bi-twitter" style="font-size:x-large;"></i>
+                <i class="bi bi-youtube" style="font-size:x-large;"></i>
+            </div>
+            <div class="col-md-4">
+                <h6>Book Tickets faster. Download our mobile Apps</h6>
+                <img src="IMAGE/png-clipart-google-play-app-store-android-mobile-app-android-text-logo.png"
+                    width="150px" class="img-fluid btn" alt="">
+                <img src="IMAGE/Download_on_the_App_Store_Badge.svg.png" class="img-fluid btn" width="150px" alt="">
+            </div>
+            <div class="col-md-6">
+                <img src="IMAGE/cards.png" width="500px" class="img-fluid btn" alt="">
+            </div>
+            <hr>
+            <div class="col-md-12 d-flex justify-content-center">
+                <h6> &#169; 2021 ibibogroup All rights reserved</h6>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="goibibi.js"></script>
+</body>
+
+</html>
